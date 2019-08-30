@@ -1,4 +1,4 @@
-#React Boilerplate
+# React Boilerplate
 
 ----
 ## first time here?
@@ -11,4 +11,5 @@
 1. run `npm run build` or `yarn build`
 2. done! in the `dist` folder you have what you need
 
+  > build foder structure needs to be improved
 ----
