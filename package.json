@@ -35,6 +35,7 @@
     "react-search-field": "^1.0.0",
     "react-table": "^6.10.0",
     "redux": "^4.0.4",
+    "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {

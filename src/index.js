@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import store from './store'
+import { store, persistor } from './store'
+import { PersistGate } from 'redux-persist/integration/react'
 import LANG_IT from './translations/it'
 import locale_it from 'react-intl/locale-data/it'
 import {IntlProvider, addLocaleData} from "react-intl"
@@ -17,11 +18,13 @@ const messages = {
 
 const routing = (
   <Provider store={ store }>
-    <IntlProvider locale='it' messages={messages['it']}>
-      <Router>
-        <App />
-      </Router>
-    </IntlProvider>
+    <PersistGate loading={null} persistor={persistor}>
+      <IntlProvider locale='it' messages={messages['it']}>
+        <Router>
+          <App />
+        </Router>
+      </IntlProvider>
+    </PersistGate>
   </Provider>
 )
 
